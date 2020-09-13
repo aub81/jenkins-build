@@ -1,12 +1,12 @@
 node{
     def myImg
-    stage ("Build image") {
+    stage ('Build image') {
         // download the dockerfile to build from
           checkout scm
         // build our docker image
         myImg = docker.build 'my-image:nginx'
     }
-    stage ("Run") {
+    stage ('Run') {
       
       docker.image('my-image:ngin').withRun('-p 80:80') { c ->
       sh 'docker ps'
