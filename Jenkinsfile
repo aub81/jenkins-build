@@ -8,7 +8,7 @@ node{
     }
     stage ('Run') {
       
-      docker.image('my-image:ngin').withRun('-p 80:80') { c ->
+      docker.image('my-image:nginx').withRun('-p 80:80') { c ->
       sh 'docker ps'
       sh 'curl localhost'
     }
