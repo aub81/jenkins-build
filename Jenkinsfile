@@ -1,5 +1,5 @@
 node{
-    def myImg
+  def myImg
     stage ('Build image') {
         // download the dockerfile to build from
           checkout scm
