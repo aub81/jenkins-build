@@ -2,8 +2,7 @@ node() {
     def myImg
     stage ("Build image") {
         // download the dockerfile to build from
-        git https://github.com/aub81/jenkins-build.git
-
+          checkout scm
         // build our docker image
         myImg = docker.build 'my-image:nginx'
     }
