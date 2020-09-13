@@ -1,4 +1,4 @@
-node() {
+node{
     def myImg
     stage ("Build image") {
         // download the dockerfile to build from
